@@ -1,0 +1,71 @@
+.product-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+
+    & .product-header {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        padding: 10px;
+        transition: 0.5s ease-in-out;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: -1;
+
+        small {
+            z-index: -1;
+        }
+    }
+
+    & .product-body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        padding: 10px;
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+
+        & .ant-qrcode {
+            height: 40% !important;
+            width: 40% !important;
+        }
+
+        & canvas {
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        &>div .ant-qrcode {
+            position: absolute;
+            right: -10%;
+            bottom: 0;
+        }
+    }
+
+    & .quantity-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & button {
+            margin-top: 10px;
+        }
+    }
+}
+
+.ant-layout {
+    background: none;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}

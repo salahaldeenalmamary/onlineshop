@@ -1,0 +1,33 @@
+.search-container {
+    transition: 0.5s ease;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    & .search-bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.ant-select-selector .ant-select-selection-search {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 10px;
+    inset-inline-end: 10px;
+    bottom: 0;
+}
+
+.ant-select-selector .ant-select-selection-search-input {
+    position: relative !important;
+    height: auto !important;
+    top: 0;
+}
+
+.ant-select-selector input {
+    cursor: auto;
+    color: inherit;
+    display: flex;
+    padding: 0;
+}

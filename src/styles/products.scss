@@ -1,0 +1,136 @@
+Header {
+    background: white !important;
+    border-radius: 10px;
+    padding: 10px !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding-inline: 0 !important;
+    line-height: normal !important;
+    flex-direction: column;
+    height: auto !important;
+
+    & h4.ant-typography {
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+.ant-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.5s ease-in-out;
+    position: relative;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.ant-card-cover img {
+    height: 50%;
+}
+
+.ant-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 0 !important;
+
+    & .ant-card-meta-detail {
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    & h5 {
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    & .ant-qrcode {
+        height: 75% !important;
+        width: 75% !important;
+    }
+
+    & canvas {
+        height: 100% !important;
+        width: 100% !important;
+    }
+}
+
+.ant-row {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & .quantity-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        & .ant-input-number {
+            width: 100px !important;
+        }
+
+        & .ant-input-number-input {
+            text-align: center !important;
+        }
+
+        & .ant-input-number-input-wrap {
+            width: 100% !important;
+        }
+
+        & .ant-input-number .ant-input-number-handler-wrap {
+            display: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .ant-row {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .ant-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 685px) {
+    .ant-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .ant-card {
+        flex-direction: column;
+    }
+
+    .ant-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-footer {
+        flex-direction: column;
+    }
+}

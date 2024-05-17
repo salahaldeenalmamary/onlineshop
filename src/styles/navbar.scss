@@ -1,0 +1,279 @@
+.nav {
+    border-radius: 10px;
+    border: 1px solid gray;
+    position: relative;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2.5px 5px whitesmoke;
+    padding: 0;
+    transition: 0.5s ease-in-out;
+    position: sticky;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+
+    & img {
+        width: 40px;
+        height: 40px;
+        transition: 0.5s ease-in-out;
+    }
+
+    & h3 {
+        font-size: 17px;
+        letter-spacing: 0.20rem;
+        font-weight: 200;
+        transition: 0.5s ease-in-out;
+        margin: 0;
+    }
+}
+
+.nav-links {
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    margin: 0;
+
+    & li {
+        list-style-type: none;
+        padding: 2.5px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 0 15px;
+        transition: 0.5s ease;
+    }
+
+    & li a {
+        border-radius: 7.5px;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        color: black;
+        transition: 0.5s ease;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    & li a:hover {
+        background-color: lightcyan;
+        color: black;
+    }
+}
+
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    transition: 0.5s ease-in-out;
+
+    & small {
+        font-size: 12px;
+    }
+}
+
+.icon {
+    color: black;
+    display: block;
+    padding: 0;
+    font-size: 30px;
+}
+
+.toggle {
+    border-radius: 10px;
+    margin: 2.5px;
+    display: none;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+    &:hover {
+        background: lightcyan;
+        color: black;
+    }
+
+    &:hover>.anticon svg {
+        transition: 0.5s ease;
+        color: black;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .nav-logo {
+        & h3 {
+            font-size: 14px;
+        }
+
+        & img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        &.active {
+            border-radius: 10px;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            top: 4rem;
+            right: 0;
+            background: lightcyan;
+            height: auto;
+            transition: 0.5s ease-in-out;
+            z-index: 10;
+
+            .ant-layout {
+                z-index: 1;
+            }
+        }
+
+        &.active li {
+            margin: 0;
+        }
+
+        &.active li a {
+            color: black;
+        }
+
+        &.active li a:hover {
+            color: black;
+            background: white;
+        }
+
+        & .icon {
+            color: black;
+        }
+
+        &.active li a:hover>.icon {
+            color: black;
+        }
+    }
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+
+    &:hover {
+        background: lightcyan;
+    }
+
+    &:hover>.cart-button button {
+        background: blue;
+        color: white;
+        border: 1px solid blue;
+    }
+
+    & img {
+        height: 20%;
+        width: 20%;
+        border-radius: 10px;
+    }
+
+    & .cart-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    & .cart-footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    & .cart-button {
+        display: flex;
+
+        & button {
+            border: 1px solid lightcoral;
+            border-radius: 10px;
+            background: none;
+            font-weight: 600;
+            color: red;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+                border: 1px solid lightcoral;
+                background: red;
+                color: white;
+            }
+        }
+    }
+}
+
+.quantity-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    & .ant-input-number {
+        width: 100px !important;
+    }
+
+    & .ant-input-number-input {
+        text-align: center !important;
+    }
+
+    & .ant-input-number-input-wrap {
+        width: 100% !important;
+    }
+
+    & .ant-input-number .ant-input-number-handler-wrap {
+        display: none !important;
+    }
+}
+
+.clear-cart,
+.order-now {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background: none;
+    font-weight: 500;
+    transition: 0.3s ease-out;
+
+    &:hover {
+        background: green;
+        color: white;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .cart-item {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .nav-container small {
+        font-size: 8px;
+    }
+
+    .icon {
+        display: block;
+        padding: 0;
+        font-size: 12px;
+    }
+
+    .nav-links {
+        padding: 0;
+    }
+}

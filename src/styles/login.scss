@@ -1,0 +1,26 @@
+.login-banner {
+    grid-area: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+}
+
+.login-body {
+    grid-area: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+}
+
+@media screen and (max-width:700px) {
+    .login-banner {
+        display: none;
+        grid-area: 0;
+    }
+
+    .login-body {
+        grid-area: 100%;
+    }
+}
